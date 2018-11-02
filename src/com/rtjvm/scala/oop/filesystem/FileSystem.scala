@@ -17,4 +17,10 @@ object FileSystem extends App{
     state = Command.from(input).apply(state)
   }
   
+  /*Functional form
+   io.Source.stdin.getLines().foldLeft(State(root, root))((currentState, newLine) => {
+    currentState.show
+    Command.from(newLine).apply(currentState)
+  })*/
+  
 }
